@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #F2F1EE;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Slideshow */
+#slider {
+    overflow: hidden;
+    
+}
+    #slider figure {
+        position: relative;
+
+        width: 1000%; /* 100% for each picture, 10 pictures = 1000% */
+        margin: 0;
+        left: 0;
+        animation: 40s slider infinite;
+        
+    }
+        #slider figure img {
+            width: 10%; /* 100 / 10 pictures = 10% */
+            height: 940px; /* to set a maximum height  */
+            float: left;
+            /*  next 2 to continue responsive with the maximum height  */
+            max-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+           
+         
+            
+        }
+@keyframes slider {
+    0% { left: 0; } /* you must divide 100% fot the amout of images you have */
+    7% { left: 0%; } /* these intermediate steps (7%, 17%, 27%, ... will make the transition speed faster */
+    10% { left: -100%; } /* because my total width: 1000% (10x 100% for 10 images), I will use 10% for each image */
+    17% { left: -100%; }
+    20% { left: -200%; }
+    27% { left: -200%; }
+    30% { left: -300%; }
+    37% { left: -300%; }
+    40% { left: -400%; }
+    47% { left: -400%; }
+    50% { left: -500%; }
+    57% { left: -500%; }
+    60% { left: -600%; }
+    67% { left: -600%; }
+    70% { left: -700%; }
+    77% { left: -700%; }
+    80% { left: -800%; }
+    87% { left: -800%; }
+    90% { left: -900%; }
+    100% { left: -900%; }
+}
+
+/* Navigation */
+nav {
+  
+     display: inline-block;
+     position: absolute;
+        z-index: 999;
+        top: 50%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        margin-top: -10%;
+       margin-right: 5%;
+}
+
+ .dropdown{
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.dropdown ul {
+    position: absolute;
+    left: 0;
+    top: 5em;
+    background-color: transparent;
+  
+    
+}
+ .dropdown-menu li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.dropdown-item a {
+    display: inline-block;
+    line-height: 30%;
+    
+}
+
+ .dropdown a:hover {
+    background-color: none;
+    color: #8CD1FB;
+    background-color: transparent;
+}   
+.navbar-custom a{
+    color: #f2cd00;
+     text-shadow: 2px 2px #007bff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+nav ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    
+}
+
+nav a#josmith {
+    float: left;
+    color: #f2cd00;
+    box-shadow: 2px 2px #007bff;
+    text-align: center;
+    padding: 0px 8px;
+    text-decoration: none;
+    font-size: 65px;
+    padding-top: 10px;
+    font-family: 'spartan';
+    border: 5px solid;
+    border-spacing: 10px 50px;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  background-color: none;
+  color: #8CD1FB;
+}
+/* nav ul ul {
+    display: none;
+    position: absolute;
+}
+
+nav ul li:hover ul {
+    display: inline-block;
+}
+
+nav ul ul li {
+    float: none;
+}
+
+nav li {
+    float: left;
+    
+} */
+/* Custom toggler */
+.navbar-custom .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(242,205,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  
+}
+
+.custom-toggler.navbar-toggler {
+  color: rgb(242,205,0);
+   border: 3px solid;
+  box-shadow: 2px 2px #007bff;
+} 
+/* Body tags */
+h5 {
+    text-decoration: underline;
+}
+
+.text-img {
+    width: 100%;
+    margin-left:0 ;
+    margin-right:0 ;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+main {
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    font-family: 'Dosis';
+}
+
+span {
+    font-family: 'Dosis';
+}
+
+.home-text {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    background-color: transparent;
+    font-size: 1.3em;
+    padding-left: .5em;
+    color: #6688A7;
+}
+
+p {
+    font-family: 'Dosis';
+    font-size: 1.3em;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: .5em;
+    text-decoration-line: underline;
+}
+
+
+
+
+/* Gallery */
+.row > .column {
+  padding: 0 8px;
+  padding-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 60px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 18%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #2d0a8d;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-shadow: 2px 2px #d8d7d7;
+}
+
+img {
+  margin-bottom: -4px;
+  
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+  
+  
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+   .navbar-custom{
+     position: absolute;
+     font-size: 20px;
+     top: 15%;
+   }
+}
+
